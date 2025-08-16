@@ -16,4 +16,5 @@ app.delete('/orders/:id', (req, res) => {
   orders.splice(parseInt(req.params.id), 1);
   res.json({success: true});
 });
+app.get('/', (req, res) => res.send('API running'));
 app.listen(3000, () => console.log('Server running on port 3000'));
